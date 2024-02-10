@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgba(208, 28, 28, 0.776);
+}
+@media only screen and(max-width:1100px) {
+    body{
+        background-color: lightblue;
+    }
+}
+.container{
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(139, 26, 157);
+    margin-top: 50px;
+    box-shadow: 20px 20px 20px 0px;
+}
+.header-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ol, li{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+}
+.li1{
+   position: absolute;
+   right: 1080px;
+   color: white;
+}
+.li1 a:hover{
+    font-size: 50px;
+    color: rgb(235, 219, 37);
+}
+.li2{
+    position: absolute;
+    right: 700px;
+   color: white;
+   text-decoration: none;
+   cursor: pointer;
+}
+.li2 a:hover{
+    font-size: 50px;
+    color: rgb(217, 226, 43);
+}
+.li3{
+    position: absolute;
+    right: 450px;
+   color: white;
+}
+.li3 a:hover{
+    font-size: 50px;
+    color: rgb(226, 220, 43);
+}
+.li4{
+    position: absolute;
+    right: 200px;
+}
+.li4 a:hover{
+    font-size: 50px;
+    color: rgb(235, 212, 40);
+}
+.head1{
+    color: white;
+    position: absolute;
+    top: 170px;
+    left: 150px;
+}
+.para{
+    position: absolute;
+    top: 290px;
+    left: 150px;
+    width: 500px;
+    height: 200px;
+}
+.inputjan{
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    top: 435px;
+    left: 150px;
+    border-radius: 40px;
+    color: black;
+    background-color: white;
+}
+.image{
+    position: relative;
+    left: 650px;
+    top: 100px;
+    border-radius: 40px;
+}
+.spanjan{
+    position: absolute;
+    right: 10px;
+    /* top: 450px; */
+}
+#btnjan{
+    position: absolute;
+    top: 500px;
+    right: 1000px;
+}

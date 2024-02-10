@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: aqua;
+      }
+      .container {
+        margin-top: 40px;
+        background-color: darkgoldenrod;
+        width: 3200px;
+        height: 400px;
+        /* opacity: 0; */
+        /* visibility: hidden; */
+        /* transition: visibility 0s, opacity 0.5s; */
+      }
+      .bg-active {
+        visibility: visible;
+        opacity: 1;
+      }
+      .form-group h4 {
+        position: absolute;
+        right: 650px;
+      }
+      .frk {
+        width: 500px;
+        height: 40px;
+      }
+      .us {
+        position: absolute;
+        right: 440px;
+        top: 90px;
+      }
+      .btn {
+        position: absolute;
+        right: 220px;
+        top: 110px;
+      }
+      .can {
+        position: absolute;
+        right: 220px;
+        top: 180px;
+      }
+      .ttt {
+        width: 500px;
+        height: 40px;
+      }
+      #rrr {
+        margin-top: 20px;
+        width: 500px;
+      }
+      #vvv {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <h4>Login</h4>
+          <div class="us">
+            <label for="user">UserName</label><br />
+            <input
+              id="username"
+              class="frk"
+              type="text"
+              name="user"
+              placeholder="Enter UserName" /><br />
+            <label for="pass">Password</label><br />
+            <input
+              id="password"
+              type="password"
+              class="ttt"
+              name="pass"
+              placeholder="Enter Password" />
+          </div>
+          <div class="btn">
+            <button onclick="logan()" id="rrr" class="btn btn-primary">
+              Login
+            </button>
+          </div>
+          <div class="can">
+            <button id="vvv" class="btn btn-danger">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      function logan() {
+        let user = document.getElementById("username").value;
+        let pass = document.getElementById("password").value;
+        if (localStorage.getItem("itemjson") == null) {
+          let itemArray = [];
+          itemArray.push([user, pass]);
+          localStorage.setItem("itemjson", JSON.stringify(itemArray));
+        } else {
+          let itemArraystr = localStorage.getItem("itemjson");
+          itemArray = JSON.parse(itemArraystr);
+          itemArray.push([user, pass]);
+          localStorage.setItem("itemjson", JSON.stringify(itemArray));
+        }
+      }
+      let bgbtn = document.querySelector(".container");
+      let cancel = document.getElementById("vvv");
+      cancel.addEventListener("click", () => {
+        bgbtn.classList.add("bg-active");
+      });
+    </script>
+  </body>
+</html>
